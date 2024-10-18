@@ -48,10 +48,22 @@ public:
         temp->next = newNode;
     }
 
-    // Other methods would be commented similarly...
+    
 };
 
 int main() {
     cout << MIN_NR + MIN_LS + MAX_NR + MAX_LS; // Output the sum of constants as a dummy operation
     return 0;
+}
+void every_other_element() {
+    Node* current = head;
+    bool skip = false;
+    while (current != nullptr) {
+        if (!skip) {
+            cout << current->data << " ";
+        }
+        skip = !skip;  // Toggle skip on each iteration
+        current = current->next;
+    }
+    cout << endl;
 }
